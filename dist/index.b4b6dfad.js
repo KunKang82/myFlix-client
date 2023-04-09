@@ -27313,7 +27313,7 @@ const MainView = ()=>{
                 Birthyear: "1954",
                 Deathyear: "Present"
             },
-            ImageUrl: "https://www.imdb.com/title/tt1630029/mediaviewer/rm92486145/?ref_=tt_ov_i",
+            ImageUrl: "https://cdn.cinematerial.com/p/297x/ayniyqcx/avatar-the-way-of-water-movie-poster-md.jpg?v=1667461543",
             Featured: "yes"
         },
         {
@@ -27331,7 +27331,7 @@ const MainView = ()=>{
                 Birthyear: "1965",
                 Deathyear: "Present"
             },
-            ImageUrl: "https://www.imdb.com/title/tt0242653/mediaviewer/rm1810127616/?ref_=tt_ov_i",
+            ImageUrl: "https://cdn.cinematerial.com/p/297x/zpriyh8z/the-matrix-revolutions-movie-poster-md.jpg?v=1456155697",
             Featured: "yes"
         },
         {
@@ -27349,7 +27349,7 @@ const MainView = ()=>{
                 Birthyear: "1970, 1971",
                 Deathyear: "Present"
             },
-            ImageUrl: "https://www.imdb.com/title/tt4154796/mediaviewer/rm2775147008/?ref_=tt_ov_i",
+            ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg",
             Featured: "yes"
         }
     ]);
@@ -27386,7 +27386,7 @@ const MainView = ()=>{
         columnNumber: 9
     }, undefined);
 };
-_s(MainView, "AwYTQesn7wdgwaSEASa0YqoY1OQ=");
+_s(MainView, "8IhBxsHFXGCxEC8/soRFqj5mahY=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
