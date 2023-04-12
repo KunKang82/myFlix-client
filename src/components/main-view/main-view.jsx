@@ -13,7 +13,7 @@ export const MainView = () => {
     const [selectedMovie, setSelectedMovie] = useState(null);
 
     useEffect(() => {
-        fetch("https://cf-myflix-client.herokuapp.com/movies")
+        fetch("https://myflix-movie-api.herokuapp.com/movies")
             .then((response) => response.json())
             .then((data) => {
                 const moviesFromApi = data.docs.map((doc) => {
