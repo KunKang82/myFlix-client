@@ -17,19 +17,20 @@ export const MainView = () => {
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
-                const moviesFromApi = data.docs.map((doc) => {
+                const moviesFromApi = data.map((movie) => {
                     return {
-                        id: doc.key,
-                        title: doc.Title,
-                        description: doc.Description,
-                        image: doc.ImgUrl,
-                        genre: doc.Genre.Name,
-                        director: doc.Director.Name
+                        id: movie._id,
+                        title: movie.Title,
+                        description: movie.Description,
+                        image: movie.ImageUrl,
+                        genre: movie.Genre.Name,
+                        director: movie.Director.Name
                     };
                 });
     
                 setMovies(moviesFromApi);
-            });
+            })
+            .catch((error) => console.log(error));
     }, []);
 
     if (selectedMovie) {

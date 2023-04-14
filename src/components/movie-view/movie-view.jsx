@@ -2,23 +2,23 @@ export const MovieView = ({ movie, onBackClick }) => {
     return (
         <div>
             <div>
-                <img src={movie.ImageUrl} alt={`${movie.Title} movie poster`} />
+                <img src={movie.image} alt={`Movie poster image for ${movie.title}`} width="400" />
             </div>
             <div>
                 <span>Title: </span>
-                <span>{movie.Title}</span>
+                <span>{movie.title}</span>
             </div>
             <div>
                 <span>Description: </span>
-                <span>{movie.Description}</span>
+                <span>{movie.description}</span>
             </div>
             <div>
                 <span>Genre: </span>
-                <span>{movie.Genre.Name}</span>
+                <span>{movie.genre}</span>
             </div>
             <div>
                 <span>Director: </span>
-                <span>{movie.Director.Name}</span>
+                <span>{movie.director}</span>
             </div>
             <button onClick={onBackClick}>Back</button>
         </div>
