@@ -5,9 +5,9 @@ import { MainView } from "./components/main-view/main-view";
 import "./index.scss";
 
 const App = () => {
-    return (
-        <MainView />
-    );
+	return (
+		<MainView />
+	);
 };
 // Main compnent (will eventually use all the others)
 // const MyFlixApplication = () => {
