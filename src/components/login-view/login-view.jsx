@@ -5,6 +5,7 @@ export const LoginView = ({ onLoggedIn }) => {
 	const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+	// Validation of user login
   const handleSubmit = (event) => {
     // this prevents the default behavior of the form which is to reload the entire page
     event.preventDefault();
@@ -28,7 +29,7 @@ export const LoginView = ({ onLoggedIn }) => {
 		// 	}
 		// });
 
-		fetch("YOUR_API_URL/login", {
+		fetch("https://myflix-movie-api.herokuapp.com/login", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
