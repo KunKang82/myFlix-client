@@ -15,7 +15,7 @@ export const SignupView = () => {
 			Email: email,
 			Birthday: birthday
 		};
-		
+
 		fetch("https://myflix-movie-api.herokuapp.com/users", {
 			method: "POST",
 			body: JSON.stringify(data),
@@ -57,19 +57,19 @@ export const SignupView = () => {
 				Email:
 				<input
 					type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}
+					required
 				/>
 			</label>
 			<label>
-			Birthday:
-        <input
-          type="date"
-          value={birthday}
-          onChange={(e) => setBirthday(e.target.value)}
-          required
-        />
+				Birthday:
+				<input
+					type="date"
+					value={birthday}
+					onChange={(e) => setBirthday(e.target.value)}
+					required
+				/>
 			</label>
 			<button type="submit">Submit</button>
 		</form>
