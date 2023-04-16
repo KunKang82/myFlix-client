@@ -15,7 +15,7 @@ import { SingupView } from "../signup-view/signup-view";
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
-  const storedToken = localStorage.getItem("toekn");
+  const storedToken = localStorage.getItem("token");
 
   const [user, setUser] = useState(storedUser? storedUser : null);
   const [token, setToken] = useState(storedToken? storedToken : null);
@@ -71,6 +71,7 @@ export const MainView = () => {
     );
   }
 
+  // Displays movie-view when movie is selected (clicked)
   if (selectedMovie) {
     return (
       <>
@@ -80,6 +81,7 @@ export const MainView = () => {
     );
   }
 
+  // Displays text message if list of movies is empty
   if (movies.length === 0) {
     return (
       <>
@@ -89,6 +91,7 @@ export const MainView = () => {
     );
   }
 
+  // Displays movie-card with logout button, if user does not select a movie
   return (
     <div>
       <button onClick={() => { setUser(null); setToken(null); localStorage.clear(); }}>Logout</button>
