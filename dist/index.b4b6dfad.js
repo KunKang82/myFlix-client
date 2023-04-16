@@ -28554,11 +28554,11 @@ $parcel$ReactRefreshHelpers$73d1.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "SingupView", ()=>SingupView);
+parcelHelpers.export(exports, "SignupView", ()=>SignupView);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _s = $RefreshSig$();
-const SingupView = ()=>{
+const SignupView = ()=>{
     _s();
     const [username, setUsername] = (0, _react.useState)("");
     const [password, setPassword] = (0, _react.useState)("");
@@ -28680,10 +28680,10 @@ const SingupView = ()=>{
         columnNumber: 3
     }, undefined);
 };
-_s(SingupView, "jsOQN3GC2XlBG9ITlzCdpyJOnso=");
-_c = SingupView;
+_s(SignupView, "jsOQN3GC2XlBG9ITlzCdpyJOnso=");
+_c = SignupView;
 var _c;
-$RefreshReg$(_c, "SingupView");
+$RefreshReg$(_c, "SignupView");
 
   $parcel$ReactRefreshHelpers$73d1.postlude(module);
 } finally {
