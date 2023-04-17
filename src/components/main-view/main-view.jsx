@@ -49,13 +49,25 @@ export const MainView = () => {
   useEffect(() => {
     if (!token) return;
 
-    fetch("https://myflixmoviedb.herokuapp.com/movies", {
-      headers: { Authorization: `Bearer ${token}` }
+    fetch("https://myflix-movie-api.herokuapp.com/movies", {
+      headers: { Authorization: `Bearer ${token}`}
     })
       .then((response) => response.json())
-      .then((movies) => {
-        setMovies(movies);
-      });
+      .then((data) => {
+        console.log(data);
+        const moviesFromApi = data.map((movie) => {
+          return {
+            id: movie._id,
+            title: movie.Title,
+            description: movie.Description,
+            image: movie.ImageUrl,
+            genre: movie.Genre.Name,
+            director: movie.Director.Name
+          };
+        });
+        setMovies(moviesFromApi);
+      })
+      .catch((error) => console.log(error));
   }, [token]);
 
   if (!user) {

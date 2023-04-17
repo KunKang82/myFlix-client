@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export const LoginView = ({ onLoggedIn }) => {
-
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -11,8 +10,8 @@ export const LoginView = ({ onLoggedIn }) => {
 		event.preventDefault();
 
 		const data = {
-			access: username,
-			secret: password
+			Username: username,
+			Password: password
 		};
 
 		// fetch("https://openlibrary.org/account/login.json", {
