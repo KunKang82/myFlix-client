@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 export const SignupView = () => {
 	const [username, setUsername] = useState("");
@@ -33,45 +35,56 @@ export const SignupView = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<label>
-				Username:
-				<input
+		<Form onSubmit={handleSubmit}>
+			<Form.Group controlId="formUsername">
+				<Form.Label>Username:</Form.Label>
+				<Form.Control
 					type="text"
 					value={username}
 					onChange={(e) => setUsername(e.target.value)}
 					required
 					minLength="3"
+					placeholder="Please create your Username"
+					pattern="^[A-Za-z0-9 .,'\-!?%&]+$"
+          title="Username should contain more than 3 characters, may only contain letters, numbers and special characters: .,'-!?%&"
 				/>
-			</label>
-			<label>
-				Password:
-				<input
+			</Form.Group>
+
+			<Form.Group controlId="formPassword">
+				<Form.Label>Password:</Form.Label>
+				<Form.Control
 					type="password"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 					required
-				/>
-			</label>
-			<label>
-				Email:
-				<input
+					minLength="3"
+					placeholder="Please create your Password"
+					pattern="^[A-Za-z0-9 .,'\-!?%&]+$"
+          title="Password should contain more than 3 characters, may only contain letters, numbers and special characters: .,'-!?%&"
+				/>		
+			</Form.Group>
+
+			<Form.Group controlId="formEmail">
+				<Form.Label>Email:</Form.Label>
+				<Form.Control
 					type="email"
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
-					required
-				/>
-			</label>
-			<label>
-				Birthday:
-				<input
+					// required
+					placeholder="Please enter your email"
+				/>		
+			</Form.Group>
+
+			<Form.Group controlId="formBirthday">
+				<Form.Label>Birthday:</Form.Label>
+				<Form.Control
 					type="date"
 					value={birthday}
 					onChange={(e) => setBirthday(e.target.value)}
-					required
-				/>
-			</label>
-			<button type="submit">Submit</button>
-		</form>
+					// required
+				/>		
+			</Form.Group>
+			<Button variant="primary" type="submit">Register</Button>			
+		</Form>
 	);
 };
