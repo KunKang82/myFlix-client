@@ -53,7 +53,7 @@ export const LoginView = ({ onLoggedIn }) => {
 					minLength="3"
 					placeholder="Please enter your Username"
 					pattern="^[A-Za-z0-9 .,'\-!?%&]+$"
-          title="Username should contain more than 3 characters, may only contain letters, numbers and special characters: .,'-!?%&"
+					title="Username should contain more than 3 characters, may only contain letters, numbers and special characters: .,'-!?%&"
 				/>
 			</Form.Group>
 
@@ -66,7 +66,7 @@ export const LoginView = ({ onLoggedIn }) => {
 					required
 					placeholder="Please enter your Password"
 					pattern="^[A-Za-z0-9 .,'\-!?%&]+$"
-          title="Password may only contain letters, numbers and special characters: .,'-!?%&"
+					title="Password may only contain letters, numbers and special characters: .,'-!?%&"
 				/>
 			</Form.Group>
 			<Button variant="primary" type="submit">Log in</Button>
