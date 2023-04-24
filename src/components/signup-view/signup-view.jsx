@@ -27,7 +27,30 @@ export const SignupView = () => {
 		}).then((response) => {
 			if (response.ok) {
 				alert("Signup successful");
-				window.location.reload();
+				// window.location.reload();
+				// login the user after successful registration
+				fetch("https://myflix-movie-api.herokuapp.com/login", {
+					method: "POST",
+					body: JSON.stringify({
+						Username:username,
+						Password: password
+					}),
+					headers: {
+						"Content-Type": "application/JSON"
+					}
+				}).then((response) => {
+					if (response.ok) {
+						return response.json();
+					} else {
+						throw new Error("Login failed");
+					}
+				}).then((data) => {
+					localStorage.setItem("token", data.token);
+					localStorage.setItem("user", JSON.stringify(data.user));
+					window.location.reload();
+				}).catch((error) => {
+					alert(error.message);
+				});
 			} else {
 				alert("Signup failed");
 			}

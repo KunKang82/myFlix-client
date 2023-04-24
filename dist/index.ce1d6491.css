@@ -50,7 +50,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: Honeydew;
+  --bs-body-bg: honeydew;
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -3802,8 +3802,8 @@ textarea.form-control-lg {
   --bs-nav-tabs-border-radius: .375rem;
   --bs-nav-tabs-link-hover-border-color: #e9ecef #e9ecef #dee2e6;
   --bs-nav-tabs-link-active-color: #495057;
-  --bs-nav-tabs-link-active-bg: Honeydew;
-  --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 Honeydew;
+  --bs-nav-tabs-link-active-bg: honeydew;
+  --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 honeydew;
   border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
 }
 
@@ -4555,7 +4555,7 @@ textarea.form-control-lg {
 
 .accordion {
   --bs-accordion-color: #212529;
-  --bs-accordion-bg: Honeydew;
+  --bs-accordion-bg: honeydew;
   --bs-accordion-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease;
   --bs-accordion-border-color: var(--bs-border-color);
   --bs-accordion-border-width: 1px;

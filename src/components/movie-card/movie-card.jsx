@@ -10,7 +10,8 @@ import { Link } from "react-router-dom";
 // import "./movie-card.scss";
 
 //The MovieCard funciton component
-export const MovieCard = ({ movie }) => {
+export const MovieCard = ({ movie, user }) => {
+	
 	return (
 		// <Card onClick={() => {onMovieClick(movie);
 		// }} className="h-100">
