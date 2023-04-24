@@ -12,7 +12,10 @@ export const MovieView = ({ movies, user, token, updateUser }) => {
 
 	const movie = movies.find((m) => m.id === movieId);
 
-	const similarMovies = movies.filter(m => m.genre === movie.genre);
+	// const similarMovies = movies.filter(m => m.genre === movie.genre);
+	const similarMovies = movies.filter(m => m.genre === movie.genre && m.id !== movie.id);
+
+	// const similarMovies = movies.filter(movie => movie.id !== currentMovie.id);
 	// const similarMovies = movies.filter(movie => movie.genre === movie.genre ? true : false)
 
 	// const [isFavorite, setIsFavorite] = useState(user.favoriteMovies.includes(movie.id));

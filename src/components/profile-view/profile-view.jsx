@@ -24,8 +24,6 @@ export const ProfileView = ({ movies, user, token, onLoggedout, updateUser, }) =
       Birthday: birthday
     };
 
-
-
     fetch(`https://myflix-movie-api.herokuapp.com/users/${user.Username}`, {
       method: "PUT",
       body: JSON.stringify(data),
@@ -57,8 +55,8 @@ export const ProfileView = ({ movies, user, token, onLoggedout, updateUser, }) =
     }).then(response => {
       if (response.ok) {
         alert("You account has been deleted");
-        onLoggedout();
-        window.location.reload;
+        localStorage.clear();
+        window.location.reload("/login");
       } else {
         alert("Your account could not be deleted")
       }
