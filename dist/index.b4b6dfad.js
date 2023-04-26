@@ -46551,36 +46551,37 @@ const LoginView = ({ onLoggedIn  })=>{
             console.log(e);
             alert("Something went wrong");
         });
-    // fetch("https://myflix-movie-api.herokuapp.com/login", {
-    // 	method: "POST",
-    // 	headers: {
-    // 		"Content-Type": "application/json"
-    // 	},
-    // 	body: JSON.stringify(data)
-    // })
-    // 	.then((response) => response.json())
-    // 	.then((data) => {
-    // 		console.log("Login response: ", data);
-    // 		if (data) {
-    // 			localStorage.setItem("user", JSON.stringify(data.user));
-    // 			// localStorage.setItem("password", JSON.stringify(data.password));
-    // 			localStorage.setItem("token", data.token);
-    // 			onLoggedIn(data.user, data.token);
-    // 			// onLoggedIn(data.user, data.password, data.token);
-    // 		} else {
-    // 			alert("No such user");
-    // 		}
-    // 	})
-    // 	.catch((e) => {
-    // 		console.log(e);
-    // 		alert("Something went wrong");
-    // 	});
     };
+    // 	fetch("https://myflix-movie-api.herokuapp.com/login", {
+    // 		method: "POST",
+    // 		headers: {
+    // 			"Content-Type": "application/json"
+    // 		},
+    // 		body: JSON.stringify(data)
+    // 	})
+    // 		.then((response) => response.json())
+    // 		.then((data) => {
+    // 			console.log("Login response: ", data);
+    // 			if (data.user) {
+    // 				localStorage.setItem("user", JSON.stringify(data.user));
+    // 				// localStorage.setItem("password", JSON.stringify(data.password));
+    // 				localStorage.setItem("token", data.token);
+    // 				onLoggedIn(data.user, data.token);
+    // 				// onLoggedIn(data.user, data.password, data.token);
+    // 			} else {
+    // 				alert("No such user");
+    // 			}
+    // 		})
+    // 		.catch((e) => {
+    // 			console.log(e);
+    // 			alert("Something went wrong");
+    // 		});
+    // };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default), {
         onSubmit: handleSubmit,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
-                controlID: "formUsername",
+                controlid: "formUsername",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
                         children: "Username:"
@@ -46610,7 +46611,7 @@ const LoginView = ({ onLoggedIn  })=>{
                 columnNumber: 4
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Group, {
-                controlID: "formPassword",
+                controlid: "formPassword",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formDefault.default).Label, {
                         children: "Password:"
@@ -46746,10 +46747,10 @@ const SignupView = ()=>{
                         value: username,
                         onChange: (e)=>setUsername(e.target.value),
                         required: true,
-                        minLength: "3",
+                        minLength: "5",
                         placeholder: "Please create your Username",
                         pattern: "^[A-Za-z0-9 .,'\\-!?%&]+$",
-                        title: "Username should contain more than 3 characters, may only contain letters, numbers and special characters: .,'-!?%&"
+                        title: "Username should contain more than 5 characters, may only contain letters, numbers and special characters: .,'-!?%&"
                     }, void 0, false, {
                         fileName: "src/components/signup-view/signup-view.jsx",
                         lineNumber: 64,

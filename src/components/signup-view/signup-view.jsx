@@ -66,10 +66,10 @@ export const SignupView = () => {
 					value={username}
 					onChange={(e) => setUsername(e.target.value)}
 					required
-					minLength="3"
+					minLength="5"
 					placeholder="Please create your Username"
 					pattern="^[A-Za-z0-9 .,'\-!?%&]+$"
-          title="Username should contain more than 3 characters, may only contain letters, numbers and special characters: .,'-!?%&"
+          title="Username should contain more than 5 characters, may only contain letters, numbers and special characters: .,'-!?%&"
 				/>
 			</Form.Group>
 
