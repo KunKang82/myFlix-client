@@ -2,8 +2,16 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { useState, useEffect } from "react";
 
-export const NavigationBar = ({ user, onLoggedOut }) => {
+export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
+
+  const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    onSearch(query);
+  }, [query]);
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
@@ -33,8 +41,13 @@ export const NavigationBar = ({ user, onLoggedOut }) => {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
             />
-            <Button variant="outline-success">Search</Button>
+              <Link to={"/"}>
+                <Button variant="outline-success" onClick={() => {
+                  onSearch(query);}}>Search</Button>
+              </Link>              
           </Form>
         </Navbar.Collapse>
       </Container>
