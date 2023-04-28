@@ -27,7 +27,7 @@ export const SignupView = () => {
 		}).then((response) => {
 			if (response.ok) {
 				alert("Signup successful");
-				// window.location.reload();
+				// window.location.replace("/login"); // moves to the login page after signing up
 				// login the user after successful registration
 				fetch("https://myflix-movie-api.herokuapp.com/login", {
 					method: "POST",

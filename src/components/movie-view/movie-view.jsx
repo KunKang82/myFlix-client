@@ -12,24 +12,14 @@ export const MovieView = ({ movies, user, token, updateUser }) => {
 
 	const movie = movies.find((m) => m.id === movieId);
 
-	// const similarMovies = movies.filter(m => m.genre === movie.genre);
 	const similarMovies = movies.filter(m => m.genre === movie.genre && m.id !== movie.id);
 
-	// const similarMovies = movies.filter(movie => movie.id !== currentMovie.id);
-	// const similarMovies = movies.filter(movie => movie.genre === movie.genre ? true : false)
-
-	// const [isFavorite, setIsFavorite] = useState(user.favoriteMovies.includes(movie.id));
 	const [isFavorite, setIsFavorite] = useState(user.FavoriteMovies ? user.FavoriteMovies.includes(movie.id) : false);
-	// const [isFavorite, setIsFavorite] = useState(user.favoriteMovies && user.favoriteMovies.includes(movie.id));
 
 	useEffect(() => {
 		setIsFavorite(user.FavoriteMovies && user.FavoriteMovies.includes(movie.id));
 	}, [movieId]);
 	
-	// useEffect(() => {
-	// 	setIsFavorite(user.favoriteMovies.includes(movie.id));
-	// }, [movieId])
-
 	const addFavorite = () => {
 		fetch(`https://myflix-movie-api.herokuapp.com/users/${user.Username}/movies/${movieId}`, {
 			method: "POST",
@@ -100,33 +90,6 @@ export const MovieView = ({ movies, user, token, updateUser }) => {
 		</>
 	);
 };
-// 	return (
-// 		<div>
-// 			<div>
-// 				<img className="w-100" src={movie.image} alt={`Movie poster image for ${movie.title}`} />
-// 			</div>
-// 			<div>
-// 				<span>Title: </span>
-// 				<span>{movie.title}</span>
-// 			</div>
-// 			<div>
-// 				<span>Description: </span>
-// 				<span>{movie.description}</span>
-// 			</div>
-// 			<div>
-// 				<span>Genre: </span>
-// 				<span>{movie.genre}</span>
-// 			</div>
-// 			<div>
-// 				<span>Director: </span>
-// 				<span>{movie.director}</span>
-// 			</div>
-// 			<Link to={'/'}>
-// 				<button className="back-button" style={{ cursor: "pointer"}}>Back</button>
-// 			</Link>
-// 		</div>
-// 	);
-// };
 
 MovieView.propTypes = {
 	movie: PropTypes.shape({

@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Card, Col } from "react-bootstrap";
 import { MovieCard } from "../movie-card/movie-card";
-import { MainView } from "../main-view/main-view";
-// import { Link } from "react-router-dom";
-
-
 
 export const ProfileView = ({ movies, user, token, onLoggedout, updateUser, }) => {
   const [username, setUsername] = useState("");
@@ -13,7 +9,7 @@ export const ProfileView = ({ movies, user, token, onLoggedout, updateUser, }) =
   const [birthday, setBirthday] = useState("");
 
   const favoriteMovies = movies.filter(m => user.FavoriteMovies.includes(m.id));
-
+  
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -56,7 +52,7 @@ export const ProfileView = ({ movies, user, token, onLoggedout, updateUser, }) =
       if (response.ok) {
         alert("You account has been deleted");
         localStorage.clear();
-        window.location.reload("/login");
+        window.location.reload("/login"); // moves to the login page automatically after the account is deleted
       } else {
         alert("Your account could not be deleted")
       }
@@ -137,55 +133,9 @@ export const ProfileView = ({ movies, user, token, onLoggedout, updateUser, }) =
       </Col>
       {favoriteMovies.map(movie => (
         <Col className="mb-4" key={movie.id} xl={6} lg={3} md={4} xs={6}>
-          <MovieCard movie={movie} />
-        </Col>
+          <MovieCard movie={movie} />          
+        </Col>        
       ))}
     </>
   );
 }
-
-//   return (
-//     <div>
-//       <UserInfo name={user.Username} email={user.Email} />
-//       <p>User: {user.Username}</p>
-//       <p>Email: {user.Email}</p>
-//       <div>
-//         <h2>Favorite Movies</h2>
-//         {favoriteMovieList.map((movies) => {
-//           return (
-//             <div key={movies._id}>
-//               <img src={movies.img} />
-//               <Link to={`/movies/$movies._id`}>
-//                 <h4>{movies.title}</h4>
-//               </Link>
-//               <button variant="secondary" onClick={() => removeFav(movies._id)}>Remove from list</button>
-//             </div>
-//           )
-//         })
-//         }
-//       </div>
-//       <form className='profile-form' onSubmit={(e) => handleSubmit(e)}>
-//         <h2>Want to change some info?</h2>
-//         <label>Username:</label>
-//         <input
-//           type="test"
-//           name="Username"
-//           defaultValue={user.Username}
-//           onChange={e => handleUpdate(e)} />
-//         <label>Password</label>
-//         <input
-//           type="password"
-//           name="password"
-//           defaultValue={user.Password}
-//           onChange={e => handleUpdate(e)} />
-//         <label>Email address</label>
-//         <input
-//           type="email"
-//           name="email"
-//           defaultValue={user.Email}
-//           onChange={e => handleUpdate(e.target.value)} />
-//         <button variant="primary" type="submit">Update</button>
-//       </form>
-//     </div>
-//   )
-// }
